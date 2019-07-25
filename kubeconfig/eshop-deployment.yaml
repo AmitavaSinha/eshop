@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: eshop
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: eshop
+    spec:
+      containers:
+      - image: containerRegistryDemoAzure.azurecr.io/eshop:latest
+        name: eshop
